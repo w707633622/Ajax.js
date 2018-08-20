@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="ajax.js"></script>
+        <script src="js/jquery-1.10.1.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#btn1").click(function () {
+                    ajax('get', './1.get.php', 'name=w707633622&age=24&password=gw19900706', function(data){alert(data)}, function(error){alert(error)});
+                });
+
+                $("#btn2").click(function () {
+                    ajax('post', '1.post.php', 'name=GW&age=24&password=gw19900706', function(data){alert(data)}, function(error){alert(error)});
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <button id="btn1">get</button>
+        <button id="btn2">post</button>
+    </body>
+
+</html>
